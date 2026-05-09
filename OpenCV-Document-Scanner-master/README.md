@@ -46,13 +46,15 @@ Upload Image
 ### Main Application Interface
 
 <p align="center">
-  <img src="./images/main-ui.png" width="700">
+  <img src="https://raw.githubusercontent.com/diya-trambadiya/DocuVision/main/images/main-ui.png" width="600">
+</p>
 </p>
 
 ### OCR Text Extraction
 
 <p align="center">
-  <img src="./images/ocr-output.png" width="700">
+  <img src="https://raw.githubusercontent.com/diya-trambadiya/DocuVision/main/images/main-ui.png" width="600">
+</p>
 </p>
 
 ---
