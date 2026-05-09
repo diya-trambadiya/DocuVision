@@ -43,9 +43,17 @@ Upload Image
 ---
 ## Application Preview
 
-Main Application Interface
+### Main Application Interface
 
-OCR Text Extraction
+<p align="center">
+  <img src="./images/main-ui.png" width="700">
+</p>
+
+### OCR Text Extraction
+
+<p align="center">
+  <img src="./images/ocr-output.png" width="700">
+</p>
 
 ---
 
