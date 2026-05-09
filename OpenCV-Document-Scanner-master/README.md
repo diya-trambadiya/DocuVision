@@ -1,38 +1,96 @@
-# Document Scanner
+# DocuVision – AI-Powered Document Scanner & OCR System
 
-### An interactive document scanner built in Python using OpenCV
+DocuVision is a desktop-based document processing application built using OpenCV and OCR technologies for intelligent document enhancement, text extraction, and PDF generation workflows.
 
-The scanner takes a poorly scanned image, finds the corners of the document, applies the perspective transformation to get a top-down view of the document, sharpens the image, and applies an adaptive color threshold to clean up the image.
+The application combines computer vision preprocessing with OCR-based text recognition to simplify document digitization and scanned-document management in a clean desktop interface.
 
-On my test dataset of 280 images, the program correctly detected the corners of the document 92.8% of the time.
+---
 
-This project makes use of the transform and imutils modules from pyimagesearch (which can be accessed [here](http://www.pyimagesearch.com/2014/09/01/build-kick-ass-mobile-document-scanner-just-5-minutes/)). The UI code for the interactive mode is adapted from `poly_editor.py` from [here](https://matplotlib.org/examples/event_handling/poly_editor.html).
+## Features
 
-* You can manually click and drag the corners of the document to be perspective transformed:
-![Example of interactive GUI](https://github.com/andrewdcampbell/doc_scanner/blob/master/ui.gif)
+- Intelligent document edge detection and perspective correction
+- Image preprocessing for scanned-document enhancement
+- OCR-based text extraction using EasyOCR
+- Multi-image document processing
+- Export scanned documents as PDF
+- Save extracted OCR text as `.txt`
+- Image rotation and navigation support
+- Desktop GUI workflow built with Tkinter
 
-* The scanner can also process an entire directory of images automatically and save the output in an output directory:
-![Image Directory of images to be processed](https://github.com/andrewdcampbell/doc_scanner/blob/master/before_after.gif)
+---
 
-#### Here are some examples of images before and after scan:
-<img src="https://github.com/andrewdcampbell/doc_scanner/blob/master/sample_images/cell_pic.jpg" height="450"> <img src="https://github.com/andrewdcampbell/doc_scanner/blob/master/output/cell_pic.jpg" height="450">
+## Core Workflow
 
-<img src="https://github.com/andrewdcampbell/doc_scanner/blob/master/sample_images/receipt.jpg" height="450"> <img src="https://github.com/andrewdcampbell/doc_scanner/blob/master/output/receipt.jpg" height="450">
-
-<img src="https://github.com/andrewdcampbell/doc_scanner/blob/master/sample_images/math_cheat_sheet.JPG" height="450"> <img src="https://github.com/andrewdcampbell/doc_scanner/blob/master/output/math_cheat_sheet.JPG" height="450">
-
-<img src="https://github.com/andrewdcampbell/doc_scanner/blob/master/sample_images/dollar_bill.JPG" width="350"> <img src="https://github.com/andrewdcampbell/doc_scanner/blob/master/output/dollar_bill.JPG" width="350">
-
-
-### Usage
+```text
+Upload Image
+→ Document Detection
+→ Perspective Transformation
+→ Image Enhancement
+→ OCR Text Extraction
+→ PDF/Text Export
 ```
-python scan.py (--images <IMG_DIR> | --image <IMG_PATH>) [-i]
-```
-* The `-i` flag enables interactive mode, where you will be prompted to click and drag the corners of the document. For example, to scan a single image with interactive mode enabled:
-```
-python scan.py --image sample_images/desk.JPG -i
-```
-* Alternatively, to scan all images in a directory without any input:
-```
-python scan.py --images sample_images
-```
+---
+
+| Technology   | Purpose                              |
+| ------------ | ------------------------------------ |
+| Python       | Core application development         |
+| OpenCV       | Image processing & document scanning |
+| EasyOCR      | OCR text extraction                  |
+| Tkinter      | Desktop GUI                          |
+| Pillow (PIL) | Image handling                       |
+| NumPy        | Image array processing               |
+
+---
+## Application Preview
+
+Main Application Interface
+
+OCR Text Extraction
+
+---
+
+## Use Cases
+- Document digitization
+- OCR-based text extraction
+- Scanned PDF generation
+- Image-to-text workflows
+- Preprocessing for document AI pipelines
+
+---
+## Run Locally
+pip install -r requirements.txt
+pip install easyocr
+
+python gui_app.py
+
+---
+## Folder Structure
+DocuVision/
+
+  ├── gui_app.py
+
+  ├── scan.py
+
+  ├── requirements.txt
+
+  ├── output/
+
+  ├── sample_images/
+
+  ├── pymagesearch/
+
+  └── screenshots/
+
+---
+## Future Improvements
+- Multi-language OCR support
+- Searchable PDF generation
+- OCR confidence analytics
+- Batch OCR export workflows
+- Cloud storage integration
+
+---
+## License
+
+This project is intended for educational and practical AI workflow experimentation purposes.
+
